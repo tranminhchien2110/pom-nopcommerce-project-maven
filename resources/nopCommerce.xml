@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="false">
+
+	<listeners>
+		<listener
+			class-name="com.nopcommerce.extentreport.ExtentReportListener"></listener>
+	</listeners>
+
+	<test name="RUN ON CHROME" group-by-instances="true">
+		<parameter name="browser" value="chrome" />
+		<packages>
+			<package name="com.nopcommerce.user.register"></package>
+			<package name="com.nopcommerce.user.login"></package>
+			<package name="com.nopcommerce.admin.search"></package>
+		</packages>
+	</test>
+</suite> 
